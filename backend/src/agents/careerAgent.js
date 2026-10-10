@@ -1,0 +1,5 @@
+import {askGemini,scoreByOverlap} from '../utils/gemini.js';
+export async function jobMatchingAgent(profile,job){const profileText=[profile?.skills?.join(' '),profile?.experience,profile?.education,profile?.careerGoal,profile?.resumeText].join(' '); const score=scoreByOverlap(profileText,[job.title,job.description,job.requirements?.join(' ')].join(' ')); const analysis=await askGemini(`Compare profile with job and return why matched, missing skills, improvement advice. Score: ${score}. Profile:${profileText}. Job:${JSON.stringify(job)}`); return {score,analysis};}
+export async function cvSummaryAgent(ctx){return askGemini(`Create ATS CV summary, LinkedIn headline and resume bullet points from context:\n${JSON.stringify(ctx)}`);}
+export async function coverLetterAgent(ctx){return askGemini(`Write personalized cover letter, short email, and LinkedIn message. Context:\n${JSON.stringify(ctx)}`);}
+export async function applicationPlannerAgent(ctx){return askGemini(`Create weekly application plan with daily targets, companies, resume tasks, interview prep. Context:\n${JSON.stringify(ctx)}`);}

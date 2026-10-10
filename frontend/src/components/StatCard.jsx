@@ -1,0 +1,1 @@
+import {motion} from 'framer-motion'; export default function StatCard({label,value,icon:Icon}){return <motion.div whileHover={{y:-4}} className="card"><div className="flex justify-between"><div><p className="text-slate-400 text-sm">{label}</p><h3 className="text-3xl font-black text-white mt-2">{value}</h3></div>{Icon&&<Icon className="text-sky-300"/>}</div></motion.div>}

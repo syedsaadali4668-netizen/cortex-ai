@@ -1,0 +1,1 @@
+export default function Logo(){return <div className="flex items-center gap-3"><div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-sky-400 to-violet-600 shadow-glow grid place-items-center font-black">C</div><div><b className="text-white">Cortex AI</b><p className="text-xs text-slate-400">AI Operating System</p></div></div>}

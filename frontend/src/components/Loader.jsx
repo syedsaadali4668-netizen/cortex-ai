@@ -1,0 +1,1 @@
+import {motion} from 'framer-motion'; export default function Loader(){return <div className="flex gap-2 items-center">{[0,1,2].map(i=><motion.span key={i} animate={{y:[0,-8,0],opacity:[.4,1,.4]}} transition={{repeat:Infinity,duration:1,delay:i*.15}} className="h-2 w-2 rounded-full bg-sky-300"/>)}<span className="text-sm text-slate-400 ml-2">Cortex thinking...</span></div>}

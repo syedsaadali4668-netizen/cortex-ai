@@ -1,0 +1,9 @@
+import AIBox from '../components/AIBox';
+export const Chat=()=> <AIBox title="Cortex Chat" subtitle="Ask anything using your saved profile, documents, reports, and memories." endpoint="/api/ai/chat" placeholder="Ask Cortex to plan, think, research, analyze, or write..."/>;
+export const Research=()=> <AIBox title="Research Hub" subtitle="Upload documents and generate summaries, insights, research gaps, and review reports." endpoint="/api/ai/research" placeholder="Research topic or question..."/>;
+export const Startup=()=> <AIBox title="Startup Builder" subtitle="Generate business models, GTM strategy, pricing, MVP roadmap, and risks." endpoint="/api/ai/startup" placeholder="Describe your startup idea..."/>;
+export const Career=()=> <AIBox title="Career Hub" subtitle="Find jobs, analyze resume, generate cover letters, and skill roadmaps." endpoint="/api/ai/find-jobs" placeholder="Example: I am a React developer in Pakistan looking for remote internships." fields={[{name:'location',placeholder:'Location'},{name:'jobType',placeholder:'Job type'}]}/>;
+export const Projects=()=> <AIBox title="Project Workspace" subtitle="Convert ideas into milestones, sprints, tasks, risks, and KPIs." endpoint="/api/ai/project-plan" placeholder="Describe your project..."/>;
+export const Resume=()=> <AIBox title="Resume Analyzer" subtitle="Upload or paste resume for ATS score, improved summary, bullets, and missing keywords." endpoint="/api/ai/resume-analyze" placeholder="Paste resume text..."/>;
+export const CoverLetter=()=> <AIBox title="Cover Letter Generator" subtitle="Generate custom cover letter, email message, and LinkedIn application message." endpoint="/api/ai/cover-letter" placeholder="Paste job description..."/>;
+export const Roadmap=()=> <AIBox title="Skill Gap Roadmap" subtitle="Generate missing skills, 4-week roadmap, resources, and project ideas." endpoint="/api/ai/skill-roadmap" placeholder="Your target role or goal..."/>;

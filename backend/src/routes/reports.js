@@ -1,0 +1,2 @@
+import express from 'express'; import Report from '../models/Report.js'; import {auth} from '../middleware/auth.js';
+const r=express.Router(); r.use(auth); r.get('/',async(req,res)=>res.json(await Report.find({userId:req.user._id}).sort('-createdAt'))); r.post('/',async(req,res)=>res.json(await Report.create({...req.body,userId:req.user._id}))); r.delete('/:id',async(req,res)=>{await Report.deleteOne({_id:req.params.id,userId:req.user._id}); res.json({ok:true});}); export default r;
